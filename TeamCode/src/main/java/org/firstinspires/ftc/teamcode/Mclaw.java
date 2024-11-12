@@ -18,7 +18,7 @@ public class Mclaw extends LinearOpMode{
         waitForStart();
         while (opModeIsActive()){
             mMotor.setPower(0.4);
-            double position = 0
+            double position = 0;
 
             if(gamepad1.left_bumper){
                 position = -.1;
