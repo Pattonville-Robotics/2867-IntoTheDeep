@@ -12,8 +12,8 @@ public class Mclaw extends LinearOpMode{
         // Make sure your ID's match your configuration
         // TODO: change hardware IDs to match variable names
         // TODO: fix drift by tweaking some values
-        DcMotor mMotor = hardwareMap.dcMotor.get("somethingBetter"); // front right
-        Servo mServo = hardwareMap.servo.get("badThing");
+        DcMotor mMotor = hardwareMap.dcMotor.get("somethingBetter"); // port 0 on expansion hub
+        Servo mServo = hardwareMap.servo.get("badThing"); // port 0
 
         waitForStart();
         while (opModeIsActive()){
