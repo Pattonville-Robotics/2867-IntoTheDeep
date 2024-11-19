@@ -15,7 +15,8 @@ public class JMecanum extends LinearOpMode{
         // The strings need to match on the driver station in order for it to line up correctly
         // TODO: change hardware IDs to match variable names
         // TODO: fix drift by tweaking some values
-        DcMotor motorFrontRight = hardwareMap.dcMotor.get("Front Right"); // 
+
+        DcMotor motorFrontRight = hardwareMap.dcMotor.get("Front Right"); //
         DcMotor motorBackRight = hardwareMap.dcMotor.get("Back Right");   //
         DcMotor motorFrontLeft = hardwareMap.dcMotor.get("Front Left"); //
         DcMotor motorBackLeft = hardwareMap.dcMotor.get("Back Left");   //

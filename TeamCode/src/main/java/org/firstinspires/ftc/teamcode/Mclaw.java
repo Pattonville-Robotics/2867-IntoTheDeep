@@ -12,8 +12,9 @@ public class Mclaw extends LinearOpMode{
         // Make sure your ID's match your configuration
         // TODO: change hardware IDs to match variable names
         // TODO: fix drift by tweaking some values
-        DcMotor mMotor = hardwareMap.dcMotor.get("somethingBetter"); // front right
-        Servo mServo = hardwareMap.servo.get("badThing");
+        DcMotor mMotor = hardwareMap.dcMotor.get("somethingBetter"); // arm
+        Servo mServo = hardwareMap.servo.get("badThing"); //claw
+
         DcMotor motorFrontRight = hardwareMap.dcMotor.get("Front Right"); //
         DcMotor motorBackRight = hardwareMap.dcMotor.get("Back Right");   //
         DcMotor motorFrontLeft = hardwareMap.dcMotor.get("Front Left"); //
@@ -24,8 +25,9 @@ public class Mclaw extends LinearOpMode{
         motorBackLeft.setDirection(DcMotor.Direction.REVERSE);
         waitForStart();
         while (opModeIsActive()){
-            mMotor.setPower(0.4);
+
             double position = 0;
+            double armPower = 0;
 
             if(gamepad1.left_bumper){
                 position = -1;
@@ -33,6 +35,16 @@ public class Mclaw extends LinearOpMode{
             if(gamepad1.right_bumper){
                 position = 1;
             }
+
+            if(gamepad1.left_trigger != 0) {
+                armPower = -0.4;
+            } else if(gamepad1.right_trigger != 0){
+                armPower = 0.4;
+            } else {
+                armPower = 0;
+            }
+
+            mMotor.setPower(armPower);
             mServo.setPosition(position);
             double y = -gamepad1.left_stick_y; // Remember, this is reversed!
             double x = gamepad1.left_stick_x * 1.1; // Counteract imperfect strafing
