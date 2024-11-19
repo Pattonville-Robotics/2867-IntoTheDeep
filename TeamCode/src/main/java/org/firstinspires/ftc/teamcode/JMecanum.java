@@ -44,8 +44,6 @@ public class JMecanum extends LinearOpMode{
             motorBackLeft.setPower(backLeftPower);
             motorFrontRight.setPower(frontRightPower);
             motorBackRight.setPower(backRightPower);
-            // tell us Aaron, how you got malware, one day he'll tell us
-
 
         }
 
