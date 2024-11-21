@@ -31,21 +31,22 @@ public class Mclaw extends LinearOpMode{
 
             if(gamepad1.left_bumper){
                 position = -1;
+                mServo.setPosition(position);
             }
             if(gamepad1.right_bumper){
                 position = 1;
+                mServo.setPosition(position);
             }
 
             if(gamepad1.left_trigger != 0) {
-                armPower = -0.4;
+                armPower = -0.1;
             } else if(gamepad1.right_trigger != 0){
-                armPower = 0.4;
+                armPower = 0.1;
             } else {
                 armPower = 0;
             }
 
             mMotor.setPower(armPower); //hi
-            mServo.setPosition(position);
             double y = -gamepad1.left_stick_y; // Remember, this is reversed!
             double x = gamepad1.left_stick_x * 1.1; // Counteract imperfect strafing
             double rx = gamepad1.right_stick_x;
