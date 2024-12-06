@@ -39,14 +39,14 @@ public class Mclaw extends LinearOpMode{
             }
 
             if(gamepad1.left_trigger != 0) {
-                armPower = -0.3;
+                armPower = -0.6;
             } else if(gamepad1.right_trigger != 0){
-                armPower = 0.3;
+                armPower = 0.6;
             } else {
                 armPower = 0;
             }
-
             mMotor.setPower(armPower); //hi
+
             double y = -gamepad1.left_stick_y; // Remember, this is reversed!
             double x = gamepad1.left_stick_x * 1.1; // Counteract imperfect strafing
             double rx = gamepad1.right_stick_x;
@@ -57,10 +57,10 @@ public class Mclaw extends LinearOpMode{
             // at least one is out of the range [-1, 1]
             // This is the math to get your rotating and driving and etc
             double denominator = Math.max(Math.abs(y) + Math.abs(x) + Math.abs(rx), 1);
-            double frontLeftPower = (Math.pow((y + x + rx),3) * 0.8) / denominator;
-            double backLeftPower = (Math.pow((y - x + rx),3) * 0.8) / denominator;
-            double frontRightPower = (Math.pow((y - x - rx),3) * 0.8) / denominator;
-            double backRightPower = (Math.pow((y + x - rx),3) * 0.8) / denominator;
+            double frontLeftPower = (Math.pow((y + x + rx),3) * 1.0) / denominator;
+            double backLeftPower = (Math.pow((y - x + rx),3) * 1.0) / denominator;
+            double frontRightPower = (Math.pow((y - x - rx),3) * 1.0) / denominator;
+            double backRightPower = (Math.pow((y + x - rx),3) * 1.0) / denominator;
 
             motorFrontLeft.setPower(frontLeftPower);
             motorBackLeft.setPower(backLeftPower);
