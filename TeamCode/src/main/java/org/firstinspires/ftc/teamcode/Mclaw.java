@@ -39,9 +39,9 @@ public class Mclaw extends LinearOpMode{
             }
 
             if(gamepad1.left_trigger != 0) {
-                armPower = -0.6;
+                armPower = -0.25;
             } else if(gamepad1.right_trigger != 0){
-                armPower = 0.6;
+                armPower = 0.3;
             } else {
                 armPower = 0;
             }
