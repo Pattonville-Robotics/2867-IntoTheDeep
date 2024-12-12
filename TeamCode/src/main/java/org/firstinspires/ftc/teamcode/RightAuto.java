@@ -41,7 +41,7 @@ import com.qualcomm.robotcore.hardware.SwitchableLight;
 
 
 @Autonomous(name="Auto", group="Robot")
-public class Mauto extends LinearOpMode {
+public class RightAuto extends LinearOpMode {
 //LEFT SIDE AUTO
 
     @Override
@@ -75,46 +75,12 @@ public class Mauto extends LinearOpMode {
         */
 
         waitForStart();
-        //forward a bit
         motorFrontRight.setPower(0.5);
         motorBackRight.setPower(0.5);
         motorFrontLeft.setPower(0.5);
         motorBackLeft.setPower(0.5);
-        sleep(90);
-        //left one square
-        motorFrontRight.setPower(0.5);
-        motorBackRight.setPower(-0.5);
-        motorFrontLeft.setPower(-0.5);
-        motorBackLeft.setPower(0.5);
-        sleep(2000);
-        //forward two squares
-        motorFrontRight.setPower(0.5);
-        motorBackRight.setPower(0.5);
-        motorFrontLeft.setPower(0.5);
-        motorBackLeft.setPower(0.5);
-        sleep(2950);
-        //arm raise
-        mMotor.setPower(-0.2);
-        sleep(900);
-        //turn right
-        motorFrontRight.setPower(-0.5);
-        motorBackRight.setPower(-0.5);
-        motorFrontLeft.setPower(0.5);
-        motorBackLeft.setPower(0.5);
-        sleep(1500);
-        //forward
-        motorFrontRight.setPower(0.5);
-        motorBackRight.setPower(0.5);
-        motorFrontLeft.setPower(0.5);
-        motorBackLeft.setPower(0.5);
-        sleep(1050);
-        //lower arm
-        //arm raise
-        mMotor.setPower(0.2);
-        sleep(500);
-        //😂
-
-
+        sleep(3000);
+        //probably drives into the square correctly
 
 
 
