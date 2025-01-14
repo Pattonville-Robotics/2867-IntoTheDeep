@@ -96,7 +96,7 @@ public class Mauto extends LinearOpMode {
         motorBackRight.setPower(0.5);
         motorFrontLeft.setPower(0.5);
         motorBackLeft.setPower(0.5);
-        sleep(2950);
+        sleep(3100);
         //turn right
         motorFrontRight.setPower(-0.5);
         motorBackRight.setPower(-0.5);

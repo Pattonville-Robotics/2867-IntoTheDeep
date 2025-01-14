@@ -30,11 +30,11 @@ public class Mclaw extends LinearOpMode{
             double armPower = 0;
 
             if(gamepad1.left_bumper){
-                position = -2;
+                position = 0;
                 mServo.setPosition(position);
             }
             if(gamepad1.right_bumper){
-                position = 2;
+                position = 0.6;
                 mServo.setPosition(position);
             }
 
