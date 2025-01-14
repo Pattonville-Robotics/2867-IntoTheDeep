@@ -76,9 +76,6 @@ public class Mauto extends LinearOpMode {
 
 
         waitForStart();
-        //arm raise
-        mMotor.setPower(-0.3);
-        sleep(900);
         //forward a bit
         motorFrontRight.setPower(0.5);
         motorBackRight.setPower(0.5);
@@ -91,29 +88,24 @@ public class Mauto extends LinearOpMode {
         motorFrontLeft.setPower(-0.5);
         motorBackLeft.setPower(0.5);
         sleep(2000);
-        //forward two squares
+        //left half a square
         motorFrontRight.setPower(0.5);
-        motorBackRight.setPower(0.5);
-        motorFrontLeft.setPower(0.5);
-        motorBackLeft.setPower(0.5);
-        sleep(3100);
-        //turn right
-        motorFrontRight.setPower(-0.5);
         motorBackRight.setPower(-0.5);
-        motorFrontLeft.setPower(0.5);
+        motorFrontLeft.setPower(-0.5);
         motorBackLeft.setPower(0.5);
-        sleep(1500);
-        //forward
+        sleep(1000);
+        //forward a square
         motorFrontRight.setPower(0.5);
         motorBackRight.setPower(0.5);
         motorFrontLeft.setPower(0.5);
         motorBackLeft.setPower(0.5);
-        sleep(1050);
-        //lower arm
-        mMotor.setPower(0.2);
-        sleep(500);
-        //😂
-
+        sleep(2000);
+        //backward a square
+        motorFrontRight.setPower(0.5);
+        motorBackRight.setPower(0.5);
+        motorFrontLeft.setPower(0.5);
+        motorBackLeft.setPower(0.5);
+        sleep(-2000);
 
 
 
